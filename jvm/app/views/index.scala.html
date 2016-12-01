@@ -1,0 +1,9 @@
+<html>
+<body>
+@scalajs.html.scripts("foo", routes.Assets.versioned(_).toString, name => getClass.getResource(s"/public/$name") != null)
+
+<script type="text/javascript">
+      Main().main();
+    </script>
+</body>
+</html>

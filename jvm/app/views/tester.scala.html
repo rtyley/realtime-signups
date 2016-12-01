@@ -1,0 +1,8 @@
+<html>
+<body>
+@scalajs.html.scripts("foo", routes.Assets.versioned(_).toString, name => getClass.getResource(s"/public/$name") != null)
+
+<button id="click-me-button" type="button"
+onclick="Main().addClickedMessage()">Click me!</button>
+</body>
+</html>
