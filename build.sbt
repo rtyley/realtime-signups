@@ -13,7 +13,7 @@ val enumeratumVersion = "1.5.2"
 
 lazy val realtimeSignups = crossProject.in(file(".")).
   settings(
-    name := "realtimeSignups",
+    name := "realtime",
     version := "0.1-SNAPSHOT"
   ).jvmConfigure(_.enablePlugins(PlayScala)).jvmSettings(
   libraryDependencies ++= Seq(
