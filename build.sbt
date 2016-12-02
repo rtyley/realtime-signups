@@ -13,7 +13,7 @@ val enumeratumVersion = "1.5.2"
 
 lazy val realtimeSignups = crossProject.in(file(".")).
   settings(
-    name := "realtime",
+    name := "realtime-signups",
     version := "0.1-SNAPSHOT"
   ).jvmConfigure(_.enablePlugins(PlayScala)).jvmSettings(
   libraryDependencies ++= Seq(
@@ -21,8 +21,8 @@ lazy val realtimeSignups = crossProject.in(file(".")).
     "com.beachape" %% "enumeratum" % enumeratumVersion,
     "com.lihaoyi" %% "upickle" % "0.4.4",
     "com.lihaoyi" %% "autowire" % "0.2.6",
-    // "com.amazonaws" % "aws-java-sdk-kinesis" % "1.11.60",
-    "com.amazonaws" % "amazon-kinesis-producer" % "0.12.3",
+    "com.amazonaws" % "aws-java-sdk-core" % "1.11.14",
+    "com.amazonaws" % "amazon-kinesis-producer" % "0.12.3" exclude("com.amazonaws", "aws-java-sdk-core"), // https://github.com/awslabs/amazon-kinesis-producer/pull/84
     "com.amazonaws" % "amazon-kinesis-client" % "1.7.2"
   )
 ).jsSettings(
